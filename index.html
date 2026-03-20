@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlightWatcher Business</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <header>
+        <h1>FlightWatcher Business</h1>
+        <p>Surveillance des vols en Business Class</p>
+    </header>
+
+    <main>
+        <section id="flights-section">
+            <h2>Vols surveillés</h2>
+            <div id="flights-list"></div>
+        </section>
+
+        <section id="add-flight-section">
+            <h2>Ajouter un vol</h2>
+
+            <label>Départ :</label>
+            <input id="origin" placeholder="ex : MRS">
+
+            <label>Arrivée :</label>
+            <input id="destination" placeholder="ex : DXB">
+
+            <label>Date aller :</label>
+            <input id="date_from" type="date">
+
+            <label>Date retour :</label>
+            <input id="date_to" type="date">
+
+            <label>Flexibilité (jours) :</label>
+            <input id="flex" type="number" value="0">
+
+            <label>Seuil de baisse (€) :</label>
+            <input id="threshold" type="number" value="300">
+
+            <button onclick="addFlight()">Ajouter</button>
+        </section>
+
+        <section id="alerts-section">
+            <h2>Alertes reçues</h2>
+            <div id="alerts-list"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
